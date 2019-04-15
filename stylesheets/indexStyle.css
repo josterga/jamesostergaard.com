@@ -1,0 +1,154 @@
+:root{
+  /*Fonts*/
+  --extrafont:  'Karla', sans-serif;
+  --bodyFont: 'Arimo', sans-serif;
+  --titleFont: 'IBM Plex Sans', sans-serif;
+  --titleWeight: normal;
+
+  /*Colors*/
+  --background: #B0F2FF;
+  --base: #EFF8FF;
+  --hover: #CCB260;//EEE577;
+  --body: #A29F9B;
+  /*Display Constants*/
+  --displayBlock: block;
+  --displayTitle: inline-block;
+  --positionRelative: relative;
+  --noDeco: none;
+  --widthFull: 100%;
+  --widthDesktop: 50%;
+  --heightAuto: auto;
+  --alignCenter: center;
+}
+
+body{
+  display: var(--displayBlock);
+  position: var(--positionRelative);
+  width: var(--widthFull);
+  height: var(--heightAuto);
+  background-color: var(--background);
+  align-title: center;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-bottom: 0%;
+}
+
+
+.base{
+  display: var(--displayBlock);
+  position: var(--positionRelative);
+  width: 90%;
+  height: 100%;
+  background-color: var(--base);
+  align-title: center;
+  margin-left: 5%;
+}
+
+.title{
+  display: var(--displayBlock);
+  position: var(--positionRelative);
+  width: var(--widthFull);
+  height: var(--heightAuto);
+  text-align: center;
+}
+.title a{
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px black;
+  font-family: var(--titleFont);
+  font-size: 300%;
+}
+
+.title a:hover{
+  color: var(--hover);
+}
+
+.container{
+  background-color: var(--base);
+}
+
+.container .project{
+  display: var(--displayTitle);
+  position: var(--positionRelative);
+  width: 25%;
+  height: 25%;
+  background-color: var(--body);
+  margin: 4%;
+  text-align: center;
+}
+
+.container .project:hover{
+  background-color: var(--hover);
+}
+
+.container .project:hover a{
+  color: black;
+}
+
+.container .project a{
+  display: block;
+  text-decoration: none;
+  height: 64%;
+  color: white;
+  font-family: var(--bodyFont);
+  font-size: 200%;
+  padding-top: 25%;
+}
+.connect{
+  display: var(--displayBlock);
+  position: var(--positionRelative);
+
+  width: 100%;
+  font-size: 300%;
+  font-family: var(--titleFont);
+  text-align: center;
+}
+
+.connect a{
+  color: var(--body);
+  text-decoration: none;
+}
+
+.connect a:hover{
+  color: var(--hover);
+}
+
+#projectTItle{
+  font-size: 200%;
+  color: var(--hover);
+}
+
+#projectTItle:hover{
+  color: black;
+}
+
+.description{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 2.5%;
+  padding: 2.5%;
+  text-align: center;
+  font-size: 150%;
+}
+
+.content{
+  display: var(--displayTitle);
+  position: var(--positionRelative);
+  margin: 2.5%;
+  padding: 2.5%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 35%;
+  height: auto;
+  text-align: center;
+  font-size: 125%;
+}
+
+#ptrdesktop{
+  width: 100%;
+  transition: transform .2s;
+}
+
+#ptrdesktop:hover{
+  transform: scale(1.5);
+}
