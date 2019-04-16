@@ -144,11 +144,11 @@ body{
   font-size: 125%;
 }
 
-#ptrdesktop{
+.ptrdesktop{
   width: 100%;
   transition: transform .2s;
 }
 
-#ptrdesktop:hover{
+.ptrdesktop:hover{
   transform: scale(1.5);
 }
