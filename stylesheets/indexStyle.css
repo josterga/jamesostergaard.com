@@ -152,3 +152,12 @@ body{
 .ptrdesktop:hover{
   transform: scale(1.5);
 }
+
+.external{
+  color: var(--hover);
+  text-decoration: none;
+}
+
+.external:hover{
+  color: black;
+}
