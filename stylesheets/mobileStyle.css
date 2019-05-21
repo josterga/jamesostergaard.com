@@ -109,7 +109,7 @@ body{
 }
 
 .projects{
-  width: 69%;
+  width: 68.9%;
   height: var(--heightAuto);
   float: left;
   display: var(--displayTitle);
