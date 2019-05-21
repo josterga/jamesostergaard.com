@@ -1,0 +1,185 @@
+:root{
+  /*Fonts*/
+  --otherfont: 'Antic Slab', serif;
+  --titleWeight: normal;
+  --bodyFont:  'Merriweather', serif;
+  --extrafont: 'Comfortaa', cursive;
+  --titleFont: 'Bree Serif', serif;
+
+  /*Colors*/
+  --background: #1A73A1;
+  --base: #EFF8FF;
+  --hover: #D4AF37;
+  --body: #A29F9B;
+  --about: #0d0d0e;
+  --projects: #e4e5e2;
+  --item: #DBC47B;
+  --link: #DBC47B;
+  --pLink: #787C80;
+  /*Display Constants*/
+  --displayBlock: block;
+  --displayTitle: inline-block;
+  --positionRelative: relative;
+  --noDeco: none;
+  --widthFull: 100%;
+  --widthDesktop: 50%;
+  --heightAuto: auto;
+  --alignCenter: center;
+}
+
+body{
+  display: var(--displayTitle);
+  position: var(--positionRelative);
+  width: var(--widthFull);
+  height: var(--heightAuto);
+  background-color: var(--background);
+  align-title: center;
+  margin-top: 0%;
+  margin-right: 0%;
+  margin-left: 0%;
+  margin-bottom: 0%;
+}
+
+
+.base{
+  display: var(--displayTitle);
+  position: var(--positionRelative);
+  background-color: none;
+  align-title: center;
+  padding: 3%;
+}
+
+.title{
+  display: var(--displayTitle);
+  position: var(--positionRelative);
+  width: var(--widthFull);
+  height: var(--heightAuto);
+  text-align: center;
+  width: 30%;
+  float: left;
+  background-color: var(--about);
+  color: var(--base);
+  font-size: 200%;
+  font-family: var(--titleFont);
+}
+
+.about{
+  display: var(--displayTitle);
+  position: var(--positionRelative);
+  width: var(--widthFull);
+  height: var(--heightAuto);
+  text-align: center;
+  width: 30%;
+  float: left;
+  background-color: var(--about);
+  color: white;
+  margin-top: -1%;
+  padding-top: 1%;
+  box-shadow: 5px 5px var(--projects);
+  font-size: 100%;
+  font-family: var(--bodyont);
+}
+
+.about a{
+  text-decoration: none;
+  color: var(--link);
+  text-shadow: 1px 1px black;
+  font-family: var(--titleFont);
+  font-size: 75%;
+  padding: 1%;
+  font-weight: bold;
+}
+
+.about a:hover{
+  color: var(--hover);
+}
+
+.container{
+  width: 69%;
+  height: var(--heightAuto);
+  float: left;
+  display: var(--displayTitle);
+  background-color: var(--projects);
+  text-align: center;
+  margin-top: 1%;
+  font-size: 200%;
+  box-shadow: 5px 5px black;
+  font-family: var(--titleFont);
+  color: var(--about);
+}
+
+.projects{
+  width: 69%;
+  height: var(--heightAuto);
+  float: left;
+  display: var(--displayTitle);
+  background-color: var(--projects);
+  text-align: center;
+  box-shadow: 5px 5px var(--about);
+  border-top: solid 1px var(--projects);
+  border-left: solid 1px var(--projects);
+
+}
+
+.projects .project{
+  display: var(--displayTitle);
+  position: var(--positionRelative);
+  width: 40%;
+  height: 35%;
+  background-color: var(--item);
+  margin: 4%;
+  text-align: center;
+}
+
+.projects .project:hover{
+  background-color: var(--hover);
+}
+
+.projects .project:hover a{
+  color: black;
+}
+
+.projects .project a{
+  display: block;
+  text-decoration: none;
+  height: 64%;
+  color: var(--pLink);
+  font-family: var(--bodyFont);
+  font-size: 50%;
+  padding-top: 25%;
+}
+
+#projectTItle{
+  font-size: 200%;
+  color: var(--hover);
+}
+
+#projectTItle:hover{
+  color: black;
+}
+
+.description{
+  margin: 2.5%;
+  padding: 2.5%;
+  text-align: center;
+  font-size: 150%;
+  font-family: var(--bodyFont);
+}
+
+.ptrdesktop{
+  width: 100%;
+
+}
+
+.ptrdesktop:hover{
+
+}
+
+.external{
+  color: var(--hover);
+  text-decoration: none;
+}
+
+.external:hover{
+  color: black;
+}
