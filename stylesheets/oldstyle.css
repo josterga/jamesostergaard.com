@@ -22,13 +22,13 @@
 }
 
 body{
-  display: var(--displayTitle);
+  display: var(--displayBlock);
   position: var(--positionRelative);
   width: var(--widthFull);
   height: var(--heightAuto);
-  background-color: purple;
+  background-color: var(--background);
   align-title: center;
-  margin-top: 0%;
+  margin-top: 5%;
   margin-left: 0%;
   margin-bottom: 0%;
 }
@@ -37,107 +37,62 @@ body{
 .base{
   display: var(--displayTitle);
   position: var(--positionRelative);
-  width: 100%;
+  width: 95%;
   height: 100%;
-  background-color: none;
+  background-color: var(--base);
   align-title: center;
-  padding: 2.5%;
+  margin-left: 2.5%;
 }
 
 .title{
-  display: var(--displayTitle);
+  display: var(--displayBlock);
   position: var(--positionRelative);
   width: var(--widthFull);
   height: var(--heightAuto);
   text-align: center;
-  width: 30%;
-  float: left;
-  background-color: black;
-  color: white;
-  font-size: 200%;
 }
-
-.about{
-  display: var(--displayTitle);
-  position: var(--positionRelative);
-  width: var(--widthFull);
-  height: var(--heightAuto);
-  text-align: center;
-  width: 30%;
-  float: left;
-  background-color: black;
-  color: white;
-  margin-top: -1%;
-  padding-top: 1%;
-  box-shadow: 1px 1px white;
-  font-size: 130%;
-}
-
-.about a{
+.title a{
   text-decoration: none;
-  color: white;
+  color: black;
   text-shadow: 1px 1px black;
   font-family: var(--titleFont);
-  font-size: 100%;
-  padding: 1%;
+  font-size: 350%;
   font-weight: bold;
 }
 
-.about a:hover{
+.title a:hover{
   color: var(--hover);
 }
 
 .container{
-  width: 65%;
-  height: var(--heightAuto);
-  float: left;
-  display: var(--displayTitle);
-  background-color: white;
-  text-align: center;
-  margin-top: 1%;
-  font-size: 200%;
-  box-shadow: 5px 5px black;
-
+  background-color: var(--base);
 }
 
-.projects{
-  width: 65%;
-  height: var(--heightAuto);
-  float: left;
-  display: var(--displayTitle);
-  background-color: white;
-  text-align: center;
-  box-shadow: 5px 5px black;
-  border-top: solid 1px white;
-  border-left: solid 1px white;
-
-}
-
-.projects .project{
+.container .project{
   display: var(--displayTitle);
   position: var(--positionRelative);
-  width: 40%;
-  height: 35%;
+  width: 25%;
+  height: 25%;
   background-color: var(--body);
   margin: 4%;
   text-align: center;
 }
 
-.projects .project:hover{
+.container .project:hover{
   background-color: var(--hover);
 }
 
-.projects .project:hover a{
+.container .project:hover a{
   color: black;
 }
 
-.projects .project a{
+.container .project a{
   display: block;
   text-decoration: none;
   height: 64%;
   color: white;
   font-family: var(--bodyFont);
-  font-size: 150%;
+  font-size: 200%;
   padding-top: 25%;
 }
 .connect{
