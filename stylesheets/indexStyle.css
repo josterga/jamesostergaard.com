@@ -48,22 +48,22 @@
 
 #apples{
   animation-name: flicker;
-  animation-duration: 3s;
+  animation-duration: 3.5s;
 }
 
 #healthful{
   animation-name: flicker;
-  animation-duration: 2s;
+  animation-duration: 3s;
 }
 
 #ethicsviz{
   animation-name: flicker;
-  animation-duration: 1.6s;
+  animation-duration: 2.5s;
 }
 
 #groupme{
   animation-name: flicker;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 
 body{
