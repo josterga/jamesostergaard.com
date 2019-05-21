@@ -1,15 +1,21 @@
 :root{
   /*Fonts*/
-  --extrafont:  'Karla', sans-serif;
-  --bodyFont: 'Arimo', sans-serif;
-  --titleFont: 'IBM Plex Sans', sans-serif;
+  --otherfont: 'Antic Slab', serif;
   --titleWeight: normal;
+  --bodyFont:  'Merriweather', serif;
+  --extrafont: 'Comfortaa', cursive;
+  --titleFont: 'Bree Serif', serif;
 
   /*Colors*/
-  --background: #B0F2FF;
+  --background: #1A73A1;
   --base: #EFF8FF;
-  --hover: #CCB260;//EEE577;
+  --hover: #D4AF37;
   --body: #A29F9B;
+  --about: #0d0d0e;
+  --projects: #e4e5e2;
+  --item: #DBC47B;
+  --link: #DBC47B;
+  --pLink: #787C80;
   /*Display Constants*/
   --displayBlock: block;
   --displayTitle: inline-block;
@@ -26,9 +32,10 @@ body{
   position: var(--positionRelative);
   width: var(--widthFull);
   height: var(--heightAuto);
-  background-color: purple;
+  background-color: var(--background);
   align-title: center;
   margin-top: 0%;
+  margin-right: 0%;
   margin-left: 0%;
   margin-bottom: 0%;
 }
@@ -37,11 +44,9 @@ body{
 .base{
   display: var(--displayTitle);
   position: var(--positionRelative);
-  width: 100%;
-  height: 100%;
   background-color: none;
   align-title: center;
-  padding: 2.5%;
+  padding: 3%;
 }
 
 .title{
@@ -52,9 +57,10 @@ body{
   text-align: center;
   width: 30%;
   float: left;
-  background-color: black;
-  color: white;
+  background-color: var(--about);
+  color: var(--base);
   font-size: 200%;
+  font-family: var(--titleFont);
 }
 
 .about{
@@ -65,17 +71,18 @@ body{
   text-align: center;
   width: 30%;
   float: left;
-  background-color: black;
+  background-color: var(--about);
   color: white;
   margin-top: -1%;
   padding-top: 1%;
-  box-shadow: 1px 1px white;
+  box-shadow: 5px 5px var(--projects);
   font-size: 130%;
+  font-family: var(--bodyont);
 }
 
 .about a{
   text-decoration: none;
-  color: white;
+  color: var(--link);
   text-shadow: 1px 1px black;
   font-family: var(--titleFont);
   font-size: 100%;
@@ -88,28 +95,29 @@ body{
 }
 
 .container{
-  width: 65%;
+  width: 69%;
   height: var(--heightAuto);
   float: left;
   display: var(--displayTitle);
-  background-color: white;
+  background-color: var(--projects);
   text-align: center;
   margin-top: 1%;
   font-size: 200%;
   box-shadow: 5px 5px black;
-
+  font-family: var(--titleFont);
+  color: var(--about);
 }
 
 .projects{
-  width: 65%;
+  width: 69%;
   height: var(--heightAuto);
   float: left;
   display: var(--displayTitle);
-  background-color: white;
+  background-color: var(--projects);
   text-align: center;
-  box-shadow: 5px 5px black;
-  border-top: solid 1px white;
-  border-left: solid 1px white;
+  box-shadow: 5px 5px var(--about);
+  border-top: solid 1px var(--projects);
+  border-left: solid 1px var(--projects);
 
 }
 
@@ -118,7 +126,7 @@ body{
   position: var(--positionRelative);
   width: 40%;
   height: 35%;
-  background-color: var(--body);
+  background-color: var(--item);
   margin: 4%;
   text-align: center;
 }
@@ -135,7 +143,7 @@ body{
   display: block;
   text-decoration: none;
   height: 64%;
-  color: white;
+  color: var(--pLink);
   font-family: var(--bodyFont);
   font-size: 150%;
   padding-top: 25%;
@@ -169,25 +177,11 @@ body{
 }
 
 .description{
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
   margin: 2.5%;
   padding: 2.5%;
   text-align: center;
   font-size: 150%;
-}
-
-.content{
-  display: var(--displayTitle);
-  position: var(--positionRelative);
-  margin: 2.5%;
-  padding: 2.5%;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  width: 35%;
-  height: auto;
-  text-align: center;
-  font-size: 125%;
+  font-family: var(--bodyFont);
 }
 
 .ptrdesktop{
