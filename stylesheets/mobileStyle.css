@@ -43,27 +43,27 @@
 
 #ptr{
   animation-name: flicker;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 #apples{
   animation-name: flicker;
-  animation-duration: 3.5s;
+  animation-duration: 2.5s;
 }
 
 #healthful{
   animation-name: flicker;
-  animation-duration: 3s;
+  animation-duration: 2.1s;
 }
 
 #ethicsviz{
   animation-name: flicker;
-  animation-duration: 2.5s;
+  animation-duration: 1.5s;
 }
 
 #groupme{
   animation-name: flicker;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 

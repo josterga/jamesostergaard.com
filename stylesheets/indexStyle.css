@@ -1,4 +1,5 @@
 :root{
+  
   /*Fonts*/
   --otherfont: 'Antic Slab', serif;
   --titleWeight: normal;
@@ -35,7 +36,6 @@
 
 @keyframes flicker {
   0%   {background-color: #21243B;}
-  25%  {background-color: #21243B;}
   50%  {background-color: var(--hover);}
   75%  {background-color: #544616;}
   100% {background-color: var(--hover);}
@@ -43,27 +43,27 @@
 
 #ptr{
   animation-name: flicker;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 #apples{
   animation-name: flicker;
-  animation-duration: 3.5s;
+  animation-duration: 2.5s;
 }
 
 #healthful{
   animation-name: flicker;
-  animation-duration: 3s;
+  animation-duration: 2.1s;
 }
 
 #ethicsviz{
   animation-name: flicker;
-  animation-duration: 2.5s;
+  animation-duration: 1.5s;
 }
 
 #groupme{
   animation-name: flicker;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 body{
