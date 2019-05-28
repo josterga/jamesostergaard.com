@@ -1,5 +1,5 @@
 :root{
-  
+
   /*Fonts*/
   --otherfont: 'Antic Slab', serif;
   --titleWeight: normal;
@@ -126,7 +126,7 @@ body{
   color: var(--link);
   text-shadow: 1px 1px black;
   font-family: var(--titleFont);
-  font-size: 100%;
+  font-size: 200%;
   padding: 1%;
   font-weight: bold;
 }
