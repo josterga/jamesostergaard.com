@@ -25,6 +25,7 @@
   --widthFull: 100%;
   --widthDesktop: 50%;
   --heightAuto: auto;
+  --heightFull: 100%;
   --alignCenter: center;
 }
 
@@ -32,8 +33,8 @@ body{
   display: var(--displayBlock);
   position: var(--positionRelative);
   width: var(--widthFull);
-  height: var(--heightAuto);
-  background-color: var(--background);
+  height: 100%;
+  background-color: none;
   align-title: center;
   margin-top: 0%;
   margin-right: 0%;
@@ -42,39 +43,17 @@ body{
 
 }
 
-
-.base{
-  display: var(--displayBlock);
-  position: var(--positionRelative);
-  background-color: none;
-  align-title: center;
-  padding: 3%;
-}
-
-.title{
-  display: var(--displayBlock);
-  position: var(--positionRelative);
-  width: var(--widthFull);
-  height: var(--heightAuto);
-  text-align: center;
-  width: 1000%;
-  background-color: var(--about);
-  color: var(--base);
-  font-size: 200%;
-  font-family: var(--titleFont);
-}
-
 .about{
   display: var(--displayBlock);
   position: var(--positionRelative);
   width: var(--widthFull);
   height: var(--heightAuto);
   text-align: center;
-  width: 100%;
   background-color: var(--about);
   color: white;
-  margin-top: -1%;
-  padding-top: 1%;
+  margin-top: 0%;
+  margin-right: 0%;
+  margin-left: 0%;
   font-size: 130%;
   font-family: var(--bodyont);
 }
@@ -93,22 +72,51 @@ body{
   color: var(--hover);
 }
 
-.container{
-  width: 100%;
-  height: var(--heightAuto);
-  display: var(--displayBlock);
-  background-color: var(--projects);
-  text-align: center;
-  margin-top: 1%;
-  font-size: 200%;
-  font-family: var(--titleFont);
-  color: var(--about);
+.columns{
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.columns li{
+  font-size: 205%;
+    color: var(--hover);
+}
+
+#accom{
+  flex:left;
+  padding-right: 10%;
+}
+
+#tools{
+  flex: right;
+  padding-left: 10%;
+}
+
+#title{
+  font-size: 500%;
+  padding: .1%;
+}
+
+#bio{
+    font-size: 300%;
+}
+#secondary{
+  font-size: 250%;
+}
+
+#tertiary{
+  font-size: 205%;
+  color: var(--hover);
 }
 
 .projects{
   width: 100%;
-  height: var(--heightAuto);
+  height: var(--heightFull);
   display: var(--displayBlock);
+  position: var(--positionRelative);
+  margin-right: 0%;
+  margin-left: 0%;
   background-color: var(--projects);
   text-align: center;
 }
@@ -116,11 +124,24 @@ body{
 .projects .project{
   display: var(--displayTitle);
   position: var(--positionRelative);
-  width: 40%;
-  height: 35%;
+  width: 24%;
+  height: 200%;
   background-color: var(--item);
-  margin: 4%;
+  margin: 0%;
   text-align: center;
+  margin-bottom: 5%;
+}
+
+.projects p{
+  margin: 3%;
+}
+
+#ux{
+  font-size: 250%;
+}
+
+#dv{
+  font-size: 250%;
 }
 
 .projects .project:hover{
@@ -132,22 +153,22 @@ body{
 }
 
 .projects .project a{
-  display: block;
+  display: var(--displayBlock);
   text-decoration: none;
-  height: 64%;
+  height: 100%;
   color: var(--pLink);
   font-family: var(--bodyFont);
-  font-size: 150%;
+  font-size: 200%;
   padding-top: 25%;
 }
 
-#projectTItle{
-  font-size: 200%;
-  color: var(--hover);
+#projectTitle{
+  font-size: 300%;
+  color: var(--link);
 }
 
-#projectTItle:hover{
-  color: black;
+#projectTitle:hover{
+  color: var(--hover);
 }
 
 .description{
