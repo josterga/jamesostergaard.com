@@ -27,48 +27,9 @@
   --alignCenter: center;
 }
 
-@keyframes load {
-  0%   {background-color: #21243B;}
-  50%  {background-color: #104661;}
-  100% {background-color: var(--background);}
-}
-
-@keyframes flicker {
-  0%   {background-color: #21243B;}
-  25%  {background-color: #21243B;}
-  50%  {background-color: var(--hover);}
-  75%  {background-color: #544616;}
-  100% {background-color: var(--hover);}
-}
-
-#ptr{
-  animation-name: flicker;
-  animation-duration: 2s;
-}
-
-#apples{
-  animation-name: flicker;
-  animation-duration: 2.5s;
-}
-
-#healthful{
-  animation-name: flicker;
-  animation-duration: 2.1s;
-}
-
-#ethicsviz{
-  animation-name: flicker;
-  animation-duration: 1.5s;
-}
-
-#groupme{
-  animation-name: flicker;
-  animation-duration: 1s;
-}
-
 
 body{
-  display: var(--displayTitle);
+  display: var(--displayBlock);
   position: var(--positionRelative);
   width: var(--widthFull);
   height: var(--heightAuto);
@@ -78,48 +39,21 @@ body{
   margin-right: 0%;
   margin-left: 0%;
   margin-bottom: 0%;
-  animation-name: load;
-  animation-duration: 4s;
 }
 
-
-.base{
-  display: var(--displayTitle);
-  position: var(--positionRelative);
-  background-color: none;
-  align-title: center;
-  padding: 3%;
-}
-
-.title{
-  display: var(--displayTitle);
-  position: var(--positionRelative);
-  width: var(--widthFull);
-  height: var(--heightAuto);
-  text-align: center;
-  width: 30%;
-  float: left;
-  background-color: var(--about);
-  color: var(--base);
-  font-size: 200%;
-  font-family: var(--titleFont);
-}
 
 .about{
-  display: var(--displayTitle);
+  display: var(--displayBlock);
   position: var(--positionRelative);
   width: var(--widthFull);
   height: var(--heightAuto);
   text-align: center;
-  width: 30%;
-  float: left;
   background-color: var(--about);
   color: white;
   margin-top: -1%;
   padding-top: 1%;
-  box-shadow: 5px 5px var(--projects);
   font-size: 100%;
-  font-family: var(--bodyont);
+  font-family: var(--bodyFont);
 }
 
 .about a{
@@ -127,7 +61,7 @@ body{
   color: var(--link);
   text-shadow: 1px 1px black;
   font-family: var(--titleFont);
-  font-size: 75%;
+  font-size: 105%;
   padding: 1%;
   font-weight: bold;
 }
@@ -136,31 +70,51 @@ body{
   color: var(--hover);
 }
 
-.container{
-  width: 69%;
-  height: var(--heightAuto);
-  float: left;
-  display: var(--displayTitle);
-  background-color: var(--projects);
-  text-align: center;
-  margin-top: 1%;
-  font-size: 200%;
-  box-shadow: 5px 5px black;
-  font-family: var(--titleFont);
-  color: var(--about);
+.columns{
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.columns li{
+  font-size: 205%;
+    color: var(--hover);
+}
+
+#accom{
+  flex:left;
+  padding-right: 10%;
+}
+
+#tools{
+  flex: right;
+  padding-left: 10%;
+}
+
+#title{
+  font-size: 250%;
+  padding: .1%;
+}
+
+#bio{
+    font-size: 200%;
+}
+#secondary{
+  font-size: 150%;
+}
+
+#tertiary{
+  font-size: 160%;
+  color: var(--hover);
 }
 
 .projects{
-  width: 68.9%;
+  width: 100%;
   height: var(--heightAuto);
   float: left;
-  display: var(--displayTitle);
+  display: var(--displayBlock);
   background-color: var(--projects);
   text-align: center;
-  box-shadow: 5px 5px var(--about);
-  border-top: solid 1px var(--projects);
-  border-left: solid 1px var(--projects);
-
 }
 
 .projects .project{

@@ -55,7 +55,7 @@ body{
   margin-right: 0%;
   margin-left: 0%;
   font-size: 130%;
-  font-family: var(--bodyont);
+  font-family: var(--bodyFont);
 }
 
 .about a{
