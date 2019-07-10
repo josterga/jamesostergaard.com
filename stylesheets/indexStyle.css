@@ -184,6 +184,12 @@ body{
 
 }
 
+.ptrdesktop_inline{
+  display: var(--displayTitle);
+  width: 49%;
+  height: 50%;
+}
+
 .ptrdesktop:hover{
 
 }

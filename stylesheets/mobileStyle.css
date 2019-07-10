@@ -61,7 +61,7 @@ body{
   color: var(--link);
   text-shadow: 1px 1px black;
   font-family: var(--titleFont);
-  font-size: 105%;
+  font-size: 100%;
   padding: 1%;
   font-weight: bold;
 }
@@ -74,11 +74,11 @@ body{
   display: flex;
   padding-left: 20%;
   padding-right: 20%;
+  font-size: 10%;
 }
 
 .columns li{
-  font-size: 205%;
-    color: var(--hover);
+  color: var(--hover);
 }
 
 #accom{
@@ -146,7 +146,7 @@ body{
 }
 
 #projectTItle{
-  font-size: 200%;
+  font-size: 100%;
   color: var(--hover);
 }
 
