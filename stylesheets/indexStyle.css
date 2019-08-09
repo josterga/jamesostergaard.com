@@ -54,6 +54,7 @@ body{
   margin-top: 0%;
   margin-right: 0%;
   margin-left: 0%;
+  padding-bottom: 1%;
   font-size: 130%;
   font-family: var(--bodyFont);
 }
@@ -172,11 +173,14 @@ body{
 }
 
 .description{
-  margin: 2.5%;
   padding: 2.5%;
   text-align: center;
   font-size: 150%;
   font-family: var(--bodyFont);
+}
+
+.description p{
+  font-size: 80%;
 }
 
 .ptrdesktop{
