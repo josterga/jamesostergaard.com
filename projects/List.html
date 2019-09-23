@@ -67,15 +67,19 @@
               var onetwo = 1;
               var a = new Array();
               var temp = new Array();
-              a.push(["item", x[0].budget.value])
+              var budget = x[0].budget.value;
+              var remaining = budget;
+              a.push(["header", "blank"])
               for (i = 0; i < x[0].item.length ;i++) {
                   temp.push(x[0].item[i].value);
                   temp.push(x[0].price[i].value);
                   a.push(temp);
+                  remaining = remaining - x[0].price[i].value
                   temp = new Array();
                 }
-
-                console.log(a);
+                if (remaining > 0){
+                a.push(["remaining", budget]);
+              }
 
         // Load google charts
         google.charts.load('current', {'packages':['corechart']});
