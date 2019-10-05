@@ -32,29 +32,52 @@
       <div class="projects">
 
         <div class="description">
-          <div style="overflow-x:auto;">
+          <div id="charts" style="overflow-x:auto;">
+            <div class="controls" style="Display: inline-block;">
+              <input type="button" value="x" id="clear" style="border-radius: 50%;">
+              <input type="button" value=">" id="submit" style="border-radius: 50%;">
+              <input id="add" type="button" value="+" style="border-radius: 50%;">
+            </div>
+            <br>
             <form id="f" onsubmit="return false;">
-              <input type="button" value="Submit" id="submit">
-              <input id="add" type="button" value="Add Item">
-              <br>
               Budget
               <br>
-              <input name="budget"></input>
+              <input name="budget" style="border-radius: 25%;">
               <br>
               Items - Prices
               <br>
               (add more than one item)
               <br>
-
             </form>
           </div>
-<script type="text/javascript">
+          <script type="text/javascript">
 
           $(document).ready(function() {
 
+            var inputID = 0;
+
+            $("#clear").click(function(){
+              $("#f").empty();
+              $("#f").append("Budget<br><input name=\"budget\"></input><br>Items - Prices<br>(add more than one item)<br>");
+            });
+
+            $(".remove").on("click", (function(){
+              console.log(this.id);
+              $( "#f" ).remove(this.id);
+            }));
+
+            function removeFunction(){
+              console.log(this.id);
+              $( "#f" ).remove(this.id);
+            }
+
+
             //Add to Form
             $("#add").click(function(){
-              $("#f").append("<input name=\"item\"></input><input name=\"price\"></input><br>");
+              $("#f").append("<div class=\"temp\"><input name=\"item\" style=\"border-radius: 25%;\"></input><input name=\"price\" style=\"border-radius: 25%;\"></input> <input class=\"remove\" type=\"button\" value=\"x\" onclick=\"removeFunction\" style=\"border-radius: 50%;\"></div><br>");
+              $(".temp > .remove").attr('id', inputID.toString());
+               $(".temp").addClass(inputID.toString()).removeClass("temp");
+              inputID++;
             });
 
 
@@ -64,44 +87,36 @@
               var x = $("#f");
 
               var i;
-              var onetwo = 1;
               var a = new Array();
               var temp = new Array();
               var budget = x[0].budget.value;
               var remaining = budget;
-              a.push(["header", "blank"])
               for (i = 0; i < x[0].item.length ;i++) {
                   temp.push(x[0].item[i].value);
                   temp.push(x[0].price[i].value);
                   a.push(temp);
-                  remaining = remaining - x[0].price[i].value
+                  remaining = remaining - x[0].price[i].value;
                   temp = new Array();
                 }
-                if (remaining > 0){
-                a.push(["remaining", budget]);
+
+              var d;
+              for (d=0;d<a.length;d++){
+                $("#charts").append("<svg class=\"chart\" width=\"100\" height=\"20\" aria-labelledby=\"title desc\" role=\"img\"><g class=\"bar\"><rect width=\"160\" height=\"19\" y=\"60\"></rect></g></svg>");
+                console.log(a[d]);
               }
+            });
+        });
+          </script>
 
-        // Load google charts
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
+          <div id="barchart_material" style="width: 800px; height: 500px;"></div>
 
-        // Draw the chart and set the chart values
-        function drawChart() {
-          var data = new google.visualization.arrayToDataTable(a);
+          <svg class="chart" width="100" height="20" aria-labelledby="title desc" role="img">
+            <g class="bar">
+              <rect ></rect>
+            </g>
 
-          // Optional; add a title and set the width and height of the chart
-          var options = {'title':'Budget', 'width':550, 'height':400};
+          </svg>
 
-          // Display the chart inside the <div> element with id="piechart"
-          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-          chart.draw(data, options);
-        };
-
-});
-                });
-</script>
-
-          <div id="piechart"></div>
 
         </div>
 
