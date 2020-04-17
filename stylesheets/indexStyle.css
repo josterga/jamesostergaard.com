@@ -223,15 +223,24 @@ body{
   animation:spin 60s linear infinite;
 }
 
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+
 .images{
     justify-content: var(--alignCenter);
     width: 45%;
     margin-left: -23%;
     margin-top: 15%;
+
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
 
 }

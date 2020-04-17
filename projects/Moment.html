@@ -21,13 +21,22 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script >
-function myFunction() {
-var x = document.getElementById("animations");
-if (x.style.display === "none") {
-  x.style.display = "block";
-} else {
-  x.style.display = "none";
+
+function createResult(){
+
+  var phrases = ["do you", "breathe", "sing", "meditate", "stay hydrated", "push yourself", "step out of your comfort zone", "dream big", "create opportunity"]
+  var randphrase = phrases.length();
+  var select = Math.floor(Math.random() * randphrase);
+  var result = phrases[select];
+  return result;
 }
+
+
+jQuery(document).ready(function($){
+
+  $("#class").text(createResult);
+}
+
 </script>
   </head>
 
@@ -43,12 +52,7 @@ if (x.style.display === "none") {
 
         <div class="description">
 
-
-          <div id="animations">
-            <img src="../images/moment_green_1.png" alt="green cylinder" class="images" id="green">
-            <img src="../images/moment_purple_1.png" alt="purple cylinder" class="images" id="purple">
-          </div>
-
+            <span class="type" id="tip">???</span>
 
         </div>
 
