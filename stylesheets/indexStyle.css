@@ -17,17 +17,18 @@ body{
 #title{
   font-size: 250%;
   color: white;
+  text-decoration: none;
 }
 
 #location{
-  font-size: 150%;
+  font-size: 350%;
   color: white;
 }
 
 .project{
   text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
   margin-left: 5%;
   margin-right: 5%;
   background-color: grey;
@@ -65,10 +66,9 @@ body{
 }
 
 .project_filter{
-  text-align: right;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-right: 5%;
+  text-align: center;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
   margin-left: 5%;
   margin-right: 5%;
   background-color: grey;
@@ -88,6 +88,24 @@ body{
 .project_filter img{
   width: 10%;
   height: auto;
+}
+
+.name{
+  font-size: 250%;
+}
+
+#label {
+  font-size: 350%;
+  color: white;
+}
+
+.content{
+  text-align: center;
+}
+
+.instagram {
+  text-decoration: none;
+  color: black;
 }
 
 
