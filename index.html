@@ -1,77 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Stylesheet-->
-    <link rel = "stylesheet"  href="./stylesheets/indexStyle.css">
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-    <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css?family=Antic+Slab|Bree+Serif|Comfortaa|Merriweather&display=swap" rel="stylesheet">
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-    <!--Google Analytics-->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128992215-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-      gtag('config', 'UA-128992215-2');
-    </script>
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/jamesostergaard.github.io/">
 
-    <!--JQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
 
-    <!--Media Queries-->
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="jamesostergaard">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-    <!--Descriptions-->
-    <title>James Ostergaard</title>
-    <meta name="Description" content="Portfolio for James Ostergaard.">
-    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
 
-  </head>
+  <title>jamesostergaard</title>
+  <link rel="manifest" href="manifest.json">
 
-  <body>
-      <div class="about">
-
-
-        <a id="title" href="http://jamesostergaard.com/">James Ostergaard</a>
-
-        <p id="location">
-        Orange County, CA
-        </p>
-
-      </div>
-
-
-      <div class="project">
-
-        <a href="https://open.spotify.com/artist/4ADpqFrA7cjcB68WwZdC93?si=pZRxfzQFRaiPu-wtvBB8Zg">parclo music</a>
-        <p>lo-fi hiphop on Spotify</p>
-
-      </div>
-
-      <div class="project">
-
-        <a href="./arportfolio.html">AR Design</a>
-        <p>face filters on Instagram</p>
-
-      </div>
-
-      <div class="project">
-
-        <a href="https://shareasale.com/r.cfm?b=1661296&u=2717435&m=103243&urllink=&afftrack=0">For Days </a>
-        <p>zero waste clothing</p>
-
-      </div>
-
-
-      <div class="social">
-
-        <a href="mailto:james@jamesostergaard.com">email</a>
-        <a href="https://www.linkedin.com/in/jamesostergaard/">linkedin</a>
-
-      </div>
-
-  </body>
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "4200023530";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
