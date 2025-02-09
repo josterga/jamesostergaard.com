@@ -67547,7 +67547,7 @@ return B.ja.AP(s,"https://jamesostergaard.com","_blank")},
 $S:0}
 A.EF.prototype={
 M(a){var s=null
-return A.r8(A.b([A.iR("Projects",s,A.fX(s,s,B.l,s,s,s,s,s,s,s,s,24,s,s,B.c9,s,s,!0,s,s,s,s,s,s,s,s)),A.dw(s,20,s),new A.uE("FileNamePro.com","FileNamePro.com is a batch filename editor.","https://filenamepro.com",s),A.dw(s,40,s),new A.uE("Emanant.app","Emanant.app is a productivity micro-app including an event tracker, balance calculator, and pomodoro timer.","https://emanant.app",s)],t.E),B.c6,B.bQ)}}
+return A.r8(A.b([A.iR("Projects",s,A.fX(s,s,B.l,s,s,s,s,s,s,s,s,24,s,s,B.c9,s,s,!0,s,s,s,s,s,s,s,s)),A.dw(s,20,s),new A.uE("FileNamePro.com","A filename editor tool.","https://filenamepro.com",s),A.dw(s,40,s),new A.uE("Emanant.app","A productivity tool.","https://emanant.app",s)],t.E),B.c6,B.bQ)}}
 A.uE.prototype={
 M(a){var s=null
 return A.r8(A.b([A.iR(this.c,s,A.fX(s,s,B.l,s,s,s,s,s,s,s,s,20,s,s,B.c9,s,s,!0,s,s,s,s,s,s,s,s)),A.dw(s,10,s),A.iR(this.d,s,A.fX(s,s,B.v,s,s,s,s,s,s,s,s,s,s,s,s,s,1.5,!0,s,s,s,s,s,s,s,s)),A.dw(s,10,s),A.CQ(!1,!0,A.iR("View",s,A.fX(s,s,B.di,s,B.wa,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s)),s,!0,s,s,s,s,s,s,s,s,s,new A.Yl(this),s,s,s,s)],t.E),B.c6,B.bQ)}}
