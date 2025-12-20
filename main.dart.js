@@ -66044,7 +66044,7 @@ A.Bi.prototype={
 M(a){return new A.d9(new A.QO(),null)}}
 A.QO.prototype={
 $1(a){var s=null,r=A.bs(a,s,t.w).w.a.a,q=r>600,p=q?16:14,o=q?700:1/0,n=q?40:r*0.1,m=q?32:48
-return A.rM(new A.hD(new A.aw(0,o,0,1/0),new A.dc(new A.bh(n,m,n,m),A.pF("I\u2019m a creative technologist with experience across data, clean energy, fintech, and AI. I help teams design and maintain practical systems and processes that scale.\n\nEarly in my career, I was driven by curiosity to take things apart, understand how they worked, and rebuild them in better ways. That mindset shaped how I approach every challenge: stay resourceful, focus on outcomes, and treat everything as a learning experience.\n\nI strive to bridge technical depth with real-world usability, helping people and systems perform at their best.",s,!0,A.kJ(s,s,B.y,s,s,s,s,s,s,s,s,p,s,s,s,s,1.7,!0,s,s,s,s,s,s,s,s),B.dG),s),s),s,s)},
+return A.rM(new A.hD(new A.aw(0,o,0,1/0),new A.dc(new A.bh(n,m,n,m),A.pF("I\u2019m a creative technologist with experience across data, clean energy, fintech, and AI. I help teams design and support practical systems and processes that scale.\n\nEarly in my career, I was driven by curiosity to deconstruct technology, understand how it works, and rebuild it with purpose. That mindset shaped how I approach every challenge: stay resourceful, focus on outcomes, and treat everything as a learning experience.\n\nI strive to bridge technical depth with real-world usability, helping people and systems perform at their best.",s,!0,A.kJ(s,s,B.y,s,s,s,s,s,s,s,s,p,s,s,s,s,1.7,!0,s,s,s,s,s,s,s,s),B.dG),s),s),s,s)},
 $S:423}
 A.n2.prototype={
 M(a){var s=null
