@@ -58,6 +58,12 @@ main {
   padding-bottom: 48px;
 }
 
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .projects h2 {
   font-size: 11px;
   font-weight: 700;
@@ -85,9 +91,13 @@ main {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.project-card:hover .project-card-inner {
+.project-card:hover a.project-card-inner {
   transform: translateY(-2px);
   box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+.project-card-inner--static {
+  cursor: default;
 }
 
 .project-img {
