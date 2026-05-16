@@ -31,12 +31,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           </div>
         </div>
         <div class="project-card">
-          <div class="project-card-inner project-card-inner--static">
+          <a href="https://packetpressure.com" target="_blank" class="project-card-inner">
+            <img src="/packetpressure.png" alt="Packet Pressure" class="project-img" />
             <div class="project-info">
               <span class="project-title">Packet Pressure</span>
               <p class="project-desc">A card game about stealing packets</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
