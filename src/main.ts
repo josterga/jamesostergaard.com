@@ -23,12 +23,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           </a>
         </div>
         <div class="project-card">
-          <div class="project-card-inner project-card-inner--static">
+          <a href="https://github.com/josterga/dispatch" target="_blank" class="project-card-inner">
             <div class="project-info">
               <span class="project-title">Dispatch</span>
               <p class="project-desc">A news feed without an algorithm.</p>
             </div>
-          </div>
+          </a>
         </div>
         <div class="project-card">
           <a href="https://packetpressure.com" target="_blank" class="project-card-inner">
