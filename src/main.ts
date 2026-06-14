@@ -11,7 +11,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
 
     <section class="projects">
-      <h2>I'm making</h2>
+      <h2>Work</h2>
       <div class="project-list">
         <div class="project-card">
           <a href="https://emanant.app" target="_blank" class="project-card-inner">
@@ -35,7 +35,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <img src="/packetpressure.png" alt="Packet Pressure" class="project-img" />
             <div class="project-info">
               <h3 class="project-title">Packet Pressure</h3>
-              <p class="project-desc">An originals card game that turns internet routing into social play. Players build shared paths through a network, hold endpoints, and negotiate when routes collapse. The logic of how packets actually move, made tangible.</p>
+              <p class="project-desc">An original card game that turns internet routing into social play. Players build shared paths through a network, hold endpoints, and negotiate when routes collapse. The logic of how packets actually move, made tangible.</p>
             </div>
           </a>
         </div>
