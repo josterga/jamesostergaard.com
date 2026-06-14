@@ -18,7 +18,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <img src="/emanant.svg" alt="Emanant" class="project-img" />
             <div class="project-info">
               <h3 class="project-title">Emanant</h3>
-              <p class="project-desc">A map without a destination.</p>
+              <p class="project-desc">A map without a destination. Visualizes what's reachable on foot or by bike from where you stand.</p>
             </div>
           </a>
         </div>
@@ -26,7 +26,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <a href="https://github.com/josterga/dispatch" target="_blank" class="project-card-inner">
             <div class="project-info">
               <h3 class="project-title">Dispatch</h3>
-              <p class="project-desc">A news feed without an algorithm.</p>
+              <p class="project-desc">Scheduled agentic searches, delivered as a digest. Define agents (prompts) that run on a schedule and surface what you care about. Self-hosted, free search APIs, runs on Ollama or any LLM.</p>
             </div>
           </a>
         </div>
@@ -35,7 +35,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <img src="/packetpressure.png" alt="Packet Pressure" class="project-img" />
             <div class="project-info">
               <h3 class="project-title">Packet Pressure</h3>
-              <p class="project-desc">A card game about stealing packets</p>
+              <p class="project-desc">An originals card game that turns internet routing into social play. Players build shared paths through a network, hold endpoints, and negotiate when routes collapse. The logic of how packets actually move, made tangible.</p>
             </div>
           </a>
         </div>
@@ -46,7 +46,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <footer>
     <a href="https://github.com/josterga" target="_blank">Github</a>
     <a href="https://www.linkedin.com/in/jamesostergaard/" target="_blank">LinkedIn</a>
-    <a href="https://parcl0.com" target="_blank">parcl0</a>
+    <a href="https://parcl0.com" target="_blank" title="Art & design practice">parcl0</a>
     <a href="mailto:mail@jamesostergaard.com">Contact</a>
   </footer>
 `;
