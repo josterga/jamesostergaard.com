@@ -7,11 +7,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
   <main>
     <div class="bio">
-      <p>I work on AI and data systems. On the side, I build tools that give control back — to the user, the machine, the network.</p>
+      <p>I'm a generalist. At work I build AI infrastructure. Outside of work I look for what technology passes over: the reachable but unmapped, the relevant but unranked.</p>
     </div>
 
     <section class="projects">
-      <h2>Work</h2>
+      <h2>Projects</h2>
       <div class="project-list">
         <div class="project-card">
           <a href="https://emanant.app" target="_blank" class="project-card-inner">
