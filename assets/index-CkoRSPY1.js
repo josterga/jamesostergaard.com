@@ -1,11 +1,11 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const r of t.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&s(r)}).observe(document,{childList:!0,subtree:!0});function c(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function s(e){if(e.ep)return;e.ep=!0;const t=c(e);fetch(e.href,t)}})();document.querySelector("#app").innerHTML=`
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const a of t.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&s(a)}).observe(document,{childList:!0,subtree:!0});function c(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function s(e){if(e.ep)return;e.ep=!0;const t=c(e);fetch(e.href,t)}})();document.querySelector("#app").innerHTML=`
   <header>
-    <a href="https://jamesostergaard.com" target="_blank">James Ostergaard</a>
+    <h1><a href="https://jamesostergaard.com">James Ostergaard</a></h1>
   </header>
 
   <main>
     <div class="bio">
-      <p> I work on AI and data systems. On the side, I build tools that give control back - to the user, the machine, the network. </p>
+      <p>I work on AI and data systems. On the side, I build tools that give control back — to the user, the machine, the network.</p>
     </div>
 
     <section class="projects">
@@ -15,7 +15,7 @@
           <a href="https://emanant.app" target="_blank" class="project-card-inner">
             <img src="/emanant.svg" alt="Emanant" class="project-img" />
             <div class="project-info">
-              <span class="project-title">Emanant</span>
+              <h3 class="project-title">Emanant</h3>
               <p class="project-desc">A map without a destination.</p>
             </div>
           </a>
@@ -23,7 +23,7 @@
         <div class="project-card">
           <a href="https://github.com/josterga/dispatch" target="_blank" class="project-card-inner">
             <div class="project-info">
-              <span class="project-title">Dispatch</span>
+              <h3 class="project-title">Dispatch</h3>
               <p class="project-desc">A news feed without an algorithm.</p>
             </div>
           </a>
@@ -32,7 +32,7 @@
           <a href="https://packetpressure.com" target="_blank" class="project-card-inner">
             <img src="/packetpressure.png" alt="Packet Pressure" class="project-img" />
             <div class="project-info">
-              <span class="project-title">Packet Pressure</span>
+              <h3 class="project-title">Packet Pressure</h3>
               <p class="project-desc">A card game about stealing packets</p>
             </div>
           </a>
