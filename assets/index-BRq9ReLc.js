@@ -44,7 +44,7 @@
   <footer>
     <a href="https://github.com/josterga" target="_blank">Github</a>
     <a href="https://www.linkedin.com/in/jamesostergaard/" target="_blank">LinkedIn</a>
-    <a href="https://parcl0.com" target="_blank">Creative</a>
+    <a href="https://parcl0.com" target="_blank">parcl0</a>
     <a href="mailto:mail@jamesostergaard.com">Contact</a>
   </footer>
 `;
