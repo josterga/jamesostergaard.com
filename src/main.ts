@@ -38,21 +38,6 @@ function emanantThumb(): string {
   </svg>`;
 }
 
-function dispatchThumb(): string {
-  const widths = [82, 60, 95, 44, 74, 56];
-  const flagged = new Set([0, 3]);
-  const rows = widths.map((w, i) => {
-    const y = 14 + i * 12;
-    const on = flagged.has(i);
-    return `<g>
-      <circle cx="14" cy="${y}" r="2.4" fill="${on ? '#5566c9' : '#c2c5d6'}" />
-      <rect x="24" y="${y - 2}" width="${w}" height="3.2" rx="1.6" fill="${on ? '#7c8196' : '#d3d5de'}" />
-    </g>`;
-  });
-  return `<svg viewBox="0 0 132 92" xmlns="http://www.w3.org/2000/svg" style="background:oklch(0.975 0.006 260)">
-    ${rows.join('\n    ')}
-  </svg>`;
-}
 
 function packetThumb(): string {
   const glyphs = ['○', '△', '→', '⊕', '↑', '⊘', '□', '↗'];
@@ -95,7 +80,7 @@ const PROJECTS = [
     desc: 'Scheduled agentic searches, delivered as a digest. Define agents (prompts) that run on a schedule and surface what you care about. Self-hosted, free search APIs, runs on Ollama or any LLM.',
     meta: ['Self-hosted', 'LLM'],
     href: 'https://github.com/josterga/dispatch',
-    thumb: dispatchThumb(),
+    thumb: '<img src="/dispatch.png" alt="Dispatch — agent list view" />',
   },
   {
     id: 'packet',
