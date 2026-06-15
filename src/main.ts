@@ -171,16 +171,34 @@ const root = document.getElementById('root')!;
 root.innerHTML = html;
 
 /* ----------------------------------------------------------------
-   Theme toggle — instant swap, no transition on html element
+   Theme — instant swap, no transition on html element
    ---------------------------------------------------------------- */
+
+const THEME_COLORS = { paper: '#f9f8f5', dark: '#1b1712' };
 
 function getTheme(): string {
   return document.documentElement.getAttribute('data-theme') || 'paper';
 }
 
+function applyTheme(t: string, persist: boolean) {
+  document.documentElement.setAttribute('data-theme', t);
+  const tc = document.getElementById('theme-color');
+  if (tc) tc.setAttribute('content', THEME_COLORS[t as keyof typeof THEME_COLORS] ?? THEME_COLORS.paper);
+  if (persist) {
+    try { localStorage.setItem('jo-theme', t); } catch (e) {}
+  }
+}
+
 document.querySelector<HTMLButtonElement>('.theme-toggle')!
   .addEventListener('click', () => {
-    const next = getTheme() === 'dark' ? 'paper' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('jo-theme', next); } catch (e) {}
+    applyTheme(getTheme() === 'dark' ? 'paper' : 'dark', true);
   });
+
+// Follow OS preference changes only when the user hasn't set a manual override
+try {
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    let stored: string | null = null;
+    try { stored = localStorage.getItem('jo-theme'); } catch (_) {}
+    if (!stored) applyTheme(e.matches ? 'dark' : 'paper', false);
+  });
+} catch (_) {}
