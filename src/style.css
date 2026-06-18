@@ -386,6 +386,8 @@ a { color: inherit; text-decoration: none; }
   }
   .row .desc { max-width: none; }
   .statement { max-width: none; }
+  .row .meta { flex-wrap: wrap; }
+  .meta-actions { width: 100%; display: inline-flex; gap: 18px; }
 }
 
 /* ---- tabs (Projects / Writing) ------------------------------- */

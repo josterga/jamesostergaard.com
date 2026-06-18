@@ -119,9 +119,8 @@ function projectRow(p: Project, n: number): string {
   const metaSpans = p.meta.map(m => `<span>${m}</span>`).join('');
   const hasCaseStudy = !!p.caseStudy;
   const metaAction = hasCaseStudy
-    ? `<span class="go">Case Study <span aria-hidden="true">→</span></span>
-          <a class="meta-ext-link" href="${p.href}" target="_blank" rel="noopener">View <span aria-hidden="true">↗</span></a>`
-    : `<span class="go">View <span aria-hidden="true">↗</span></span>`;
+    ? `<span class="meta-actions"><span class="go">Case Study <span aria-hidden="true">→</span></span><a class="meta-ext-link" href="${p.href}" target="_blank" rel="noopener">View <span aria-hidden="true">↗</span></a></span>`
+    : `<span class="meta-actions"><span class="go">View <span aria-hidden="true">↗</span></span></span>`;
   const inner = `
       <div class="num">${pad(n)}</div>
       <div class="body">
@@ -184,10 +183,11 @@ function renderCaseStudy(p: Project): string {
         </div>
         <h1 class="ov-h1">${p.title}</h1>
         ${cs.overview ? `<p class="ov-dek">${cs.overview}</p>` : ''}
-        <a href="${p.href}" target="_blank" rel="noopener" class="ov-proj-link">View project <span aria-hidden="true">↗</span></a>
+        <a href="${p.href}" target="_blank" rel="noopener" class="ov-proj-link">View ${p.title} <span aria-hidden="true">↗</span></a>
       </header>
       <div class="ov-thumb-lg">${p.thumb}</div>
       <div class="ov-sections">${sections}</div>
+      <a href="${p.href}" target="_blank" rel="noopener" class="ov-proj-link" style="margin: 40px 0 0">View ${p.title} <span aria-hidden="true">↗</span></a>
     </article>`;
 }
 
