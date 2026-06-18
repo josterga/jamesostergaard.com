@@ -174,7 +174,7 @@ function renderCaseStudy(p: Project): string {
   const sections = cs.sections.map((s, i) => `
     <div class="ov-section">
       <p class="ov-sec-label"><span class="ov-sec-n">${pad(i + 1)}</span>${s.label}</p>
-      <p class="ov-sec-body">${s.body}</p>
+      <div class="ov-sec-body">${(Array.isArray(s.body) ? s.body : [s.body]).map(para => `<p>${para}</p>`).join('')}</div>
     </div>`).join('');
   return `
     <article>

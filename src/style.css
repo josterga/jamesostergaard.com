@@ -656,8 +656,9 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(16px, 1.8vw, 18.5px);
   line-height: 1.76;
   color: var(--ink);
-  margin: 0;
 }
+.ov-sec-body p { margin: 0 0 1.2em; }
+.ov-sec-body p:last-child { margin-bottom: 0; }
 
 /* ---- responsive additions ------------------------------------ */
 @media (max-width: 720px) {
