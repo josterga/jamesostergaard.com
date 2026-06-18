@@ -334,7 +334,11 @@ window.addEventListener('keydown', (e) => {
    ---------------------------------------------------------------- */
 
 function setTab(tab: Tab): void {
-  location.hash = tab === 'writing' ? 'writing' : '';
+  if (tab === 'writing') {
+    history.replaceState(null, '', '#writing');
+  } else {
+    history.replaceState(null, '', location.pathname);
+  }
   document.querySelectorAll<HTMLElement>('.tab').forEach(btn => {
     btn.setAttribute('aria-selected', String(btn.dataset.tab === tab));
   });
