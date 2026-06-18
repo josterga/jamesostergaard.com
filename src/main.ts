@@ -118,6 +118,10 @@ function getInitialTab(): Tab {
 function projectRow(p: Project, n: number): string {
   const metaSpans = p.meta.map(m => `<span>${m}</span>`).join('');
   const hasCaseStudy = !!p.caseStudy;
+  const metaAction = hasCaseStudy
+    ? `<span class="go">Case Study <span aria-hidden="true">→</span></span>
+          <a class="meta-ext-link" href="${p.href}" target="_blank" rel="noopener">View <span aria-hidden="true">↗</span></a>`
+    : `<span class="go">View <span aria-hidden="true">↗</span></span>`;
   const inner = `
       <div class="num">${pad(n)}</div>
       <div class="body">
@@ -128,8 +132,7 @@ function projectRow(p: Project, n: number): string {
         <p class="desc">${p.desc}</p>
         <div class="meta">
           ${metaSpans}
-          ${hasCaseStudy ? '<span class="go">Case Study <span aria-hidden="true">→</span></span>' : ''}
-          <a class="meta-ext-link" href="${p.href}" target="_blank" rel="noopener">View <span aria-hidden="true">↗</span></a>
+          ${metaAction}
         </div>
       </div>
       <div class="thumb">${p.thumb}</div>`;
