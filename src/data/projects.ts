@@ -27,7 +27,7 @@ export const PROJECTS: ProjectData[] = [
     meta: ['Web', 'Mapping'],
     href: 'https://emanant.app',
     caseStudy: {
-      overview: `Emanant is an isochrone map for walkers and cyclists. The idea is exploration, not navigation.`,
+      overview: `A map without a destination — what you can reach, not where you're going.`,
       sections: [
         {
           label: 'What it is',
@@ -89,6 +89,11 @@ export const PROJECTS: ProjectData[] = [
             `Richer data overlays. Walking comfort isn’t just about distance. Wind, temperature, and air quality affect where it makes sense to go. I’d love to see weather at each neighborhood as well as on the map.`,
             `Social isochrone. Given two locations, draw the isochrone that represents the overlap: where both people can reach in N minutes on foot. A useful tool for meeting someone in the middle without requiring either person to be the one who “comes to you.”`,
           ],
+        },
+        {label: `Conclusion`,
+          body: [
+            `Emanant started as a question — what can I reach from here? — and ended up as the map I always wanted but couldn't find.`, 
+            `The best tools change how you move through the world. I built this to find out if that was possible in a weekend. It was.`]
         },
       ],
     },
