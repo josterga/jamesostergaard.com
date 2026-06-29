@@ -104,7 +104,84 @@ export const PROJECTS: ProjectData[] = [
     tag: 'Agent runner',
     desc: 'Scheduled agentic searches, delivered as a digest. Define agents (prompts) that run on a schedule and surface what you care about. Self-hosted, free search APIs, runs on Ollama or any LLM.',
     meta: ['Self-hosted', 'LLM'],
-    href: 'https://github.com/josterga/dispatch'
+    href: 'https://github.com/josterga/dispatch',
+    caseStudy: {
+      overview: `Dispatch is a system for running AI-synthesized scheduled web searches.`,
+      sections: [
+        {
+          label: 'What it is',
+          body: `Dispatch is a system for running AI-synthesized scheduled web searches. You define agent prompts that run as web search or direct URL queries. A second prompt defines what the agent's output should look like. Runs are executed on a schedule as dispatches. The interface is a web UI that shows a feed of your 'dispatches' and you can create, schedule, and browse agents and their dispatches.`,
+        },
+        {
+          label: 'Why I built it',
+          body: [
+            `I was unhappy with the current options to schedule AI searches; I tried using Perplexity's scheduled searches feature but ultimately wanted more control over cadence, depth, and output. I also tried Google search alerts but that was missing the AI component (I think now Google has actually added AI to search alerts). There was nothing that allowed me to run a bunch of searches and easily synthesize the information coming in, on a schedule. I also built this because I get fatigued with the current state of AI interfaces. AI chats are so attention-demanding because they are conversational; sometimes I just want to fire off a query and come back to it later. I mostly use Dispatch as a morning digest to focus my news feed and keep me from doomscrolling.`,
+            `Agentic computing should be ubiquitous - running in the background, around the clock, without requiring your presence. Dispatch is a rejection of the AI engagement economy: search, retrieval, and synthesis happen on a schedule, and the output is waiting when you're ready for it. Instead of going to the news, the news comes to you.`,
+          ],
+        },
+        {
+          label: `Who it's for`,
+          body: `Dispatch is for anyone who wants a personalized information feed without handing that curation to an algorithm. The obvious fit is developers and technically-minded people comfortable self-hosting. Beyond the setup, the use cases are broad: a morning digest to replace doomscrolling, a research feed for tracking a market or technology, a clipping service for journalists or analysts who follow specific beats, or a hobbyist keeping tabs on something niche that no newsletter covers.`,
+        },
+        {
+          label: 'How I use it',
+          body: [
+            `I have several daily and weekly dispatches that I use to get an at-a-glance look into topics I care about. Some examples are new restaurants, local events, sports news, streaming & gaming news, and state and local government news. I've even used it to track when a concert tour is stopping nearby.`,
+            `Here's the agent config I use for a 'new restaurants' agent:\n\nGoal Template: Find notable new, reopening, or buzz-worthy SF restaurants, coffee shops, and pop-ups. Include neighborhood, category, price range, and what makes each distinctive.\n\nOutput template: SF Food - new restaurants, coffee shops, and pop-ups. Per entry: name, neighborhood, category (restaurant / coffee / pop-up), price range, distinctive hook.\n\nThis agent dispatches on Saturdays at 11:00 and provides me with a list of new restaurants to try.`,
+          ],
+        },
+        {
+          label: 'Pipeline',
+          body: `Each agent run is a multi-phase pipeline managed by Python - no single model call holds the full context. A planner LLM generates a set of search queries tailored to the agent's goal and sources. Those queries fire in parallel across all configured search providers - DuckDuckGo, Brave, Jina, and Ollama Cloud. A validator then reads the collected results and decides whether the research buffer is sufficient; if not, it generates retry queries and runs another pass. Once coverage passes, a synthesizer formats the final output using the agent's output template. Agents can also run multi-track: independent sub-pipelines execute in parallel, each with its own sources and goal, and their results get aggregated into a single response, a digest.`,
+        },
+        {
+          label: 'Search fan-out',
+          body: `Every search query fans out in parallel across up to four providers - DuckDuckGo, Brave Search, Jina Search, and Ollama Cloud. Results are merged and deduplicated. DuckDuckGo is always on as a baseline; the others activate when you provide an API key. All four offer free tiers.`,
+        },
+        {
+          label: 'Web fetching',
+          body: `For agents that need full article content rather than search snippets, the pipeline ranks result URLs by relevance, fetches the top pages, and runs a per-page summarizer before synthesis. Raw HTTP with tag-stripping is the default; if a page returns thin content (under 3000 chars - usually a JavaScript shell), Jina Reader is called as a fallback to get the rendered version.`,
+        },
+        {
+          label: 'Direct feed mode',
+          body: `Agents can skip the search planner entirely and pull from a list of known URLs - RSS feeds, API endpoints, anything on a predictable schedule. {today} is substituted with the current date, so date-parameterized endpoints work without configuration changes.`,
+        },
+        {
+          label: 'Multi-track pipelines',
+          body: `A single agent can run multiple independent sub-pipelines in parallel, each with its own goal, sources, freshness filter, and query count. Results are aggregated into one synthesizer call. Useful for agents that cover distinct angles - for example, research papers and industry news running as separate tracks under one agent.`,
+        },
+        {
+          label: 'LLM providers',
+          body: `The inference layer is provider-agnostic. Ollama, OpenAI, Anthropic, and Fireworks all work; the provider client normalizes their different message formats and tool call conventions into a single interface. A separate fast model can be configured for the lighter planner and validator phases, keeping costs down while using a larger model only for final synthesis.`,
+        },
+        {
+          label: 'Scheduling and dispatch',
+          body: `Dispatches are cron-scheduled via APScheduler running inside the server process. One agent can have multiple dispatches - different prompts, different schedules. Schedules persist across restarts via SQLite.`,
+        },
+        {
+          label: 'Web UI',
+          body: `Dispatch is a single-page app served from the Python process. The Digest tab compiles the most recent output from every active agent into one briefing. The Active tab shows running dispatches with next-run times. Library tab is where agents are created, edited, and exported as YAML.`,
+        },
+        {
+          label: 'Deploy',
+          body: `Dispatch ships with a systemd service file. Point it at the working directory, enable it, and the server runs as a background process with automatic restart on failure.`,
+        },
+        {
+          label: 'What I learned',
+          body: [
+            `You gotta pay to play. When I first set out to build Dispatch my goal was for it to be completely self-contained - scraper, search, and inference all running locally. I ran into some hardware constraints based on the machine I was planning to deploy it on and pivoted to cloud APIs. What I got from the change was improved accuracy and speed while still remaining very low cost. The only cost is from the LLM calls, all searches are 100% free.`,
+            `The harder decision was deciding between indexing and direct fetching. The web is made up of HTML/markdown and JavaScript, and parsing that can be difficult. Some websites I wanted to fetch were wrappers around an iFrame or other JS and I was unable to get the content in an LLM-parseable format. So the two options I have are to use the already-indexed search results, or use Jina to attempt to parse. Both are in use throughout the app and work well.`,
+          ],
+        },
+        {
+          label: `Where I'd take it`,
+          body: [
+            `I'd love to have my digests delivered as notifications straight to my phone. That would make the idea of 'information comes to me' come full circle. I've explored using the ntfy iOS app but would prefer something more universal, possibly email.`,
+            `I'd like agents to be able to call back to previous dispatch runs and refine their searches over time - effectively learning on their own what's most relevant or noisy.`,
+          ],
+        },
+      ],
+    },
   },
   {
     id: 'packet',
